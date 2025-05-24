@@ -1,8 +1,8 @@
 'use client'
 
-import { Badge, Box, Button, Container, HStack, Heading, Icon, SimpleGrid, Text, VStack, useColorModeValue, AspectRatio, Flex } from '@chakra-ui/react'
+import { Badge, Box, Container, Flex, HStack, Heading, Icon, SimpleGrid, Text, VStack, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { Award, Users, Clock, Heart, Shield, Star, CheckCircle, Stethoscope, GraduationCap, Building } from 'lucide-react'
+import { Award, CheckCircle, Clock, GraduationCap, Heart, Shield, Stethoscope, Users } from 'lucide-react'
 
 const MotionBox = motion(Box)
 const MotionVStack = motion(VStack)
@@ -100,7 +100,7 @@ export default function AboutPage({ businessInfo }: AboutPageProps) {
             </Heading>
             <Text fontSize={{ base: 'lg', md: 'xl' }} maxW="3xl" opacity={0.9}>
               Cu peste 12 ani de experiență și mii de pacienți mulțumiți, suntem dedicați să oferim 
-              cea mai bună îngrijire stomatologică în București.
+              cea mai bună îngrijire stomatologică în Alba Iulia.
             </Text>
           </MotionVStack>
         </Container>

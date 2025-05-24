@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | DentistExpert'
   },
   description: 'Cabinet stomatologic modern în Alba Iulia. Implantologie, ortodonție, estetica dentară, urgențe stomatologice. Programări online. Sună acum: 0722 234 567',
-  keywords: ['dentist bucuresti', 'cabinet stomatologic', 'implant dentar', 'ortodontie', 'estetica dentara', 'urgente stomatologice', 'albire dinti', 'proteza dentara', 'carie dentara', 'extractie dinte'],
+  keywords: ['dentist alba iulia', 'cabinet stomatologic', 'implant dentar', 'ortodontie', 'estetica dentara', 'urgente stomatologice', 'albire dinti', 'proteza dentara', 'carie dentara', 'extractie dinte'],
   authors: [{ name: 'DentistExpert' }],
   creator: 'DentistExpert',
   publisher: 'DentistExpert',

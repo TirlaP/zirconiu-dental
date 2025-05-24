@@ -9,8 +9,8 @@
   },
   "hero": {
     "badge": "Cabinet Stomatologic Modern",
-    "title": "Cabinet Stomatologic București - Sănătate Dentară Completă",
-    "subtitle": "Servicii complete de stomatologie în București și împrejurimi. Programare rapidă în 24 ore, echipamente moderne și garanție pe viață.",
+    "title": "Cabinet Stomatologic Alba Iulia - Sănătate Dentară Completă",
+    "subtitle": "Servicii complete de stomatologie în Alba Iulia și împrejurimi. Programare rapidă în 24 ore, echipamente moderne și garanție pe viață.",
     "cta_call": "Sună Acum",
     "cta_appointment": "Programare Online",
     "rating": "Rating Google",
@@ -21,7 +21,7 @@
     "subtitle": "De la urgențe stomatologice la tratamente estetice complexe, oferim soluții moderne pentru toate nevoile tale de sănătate dentară.",
     "emergency": {
       "title": "Urgențe Stomatologice",
-      "description": "Intervenții rapide pentru dureri dentare și traumatisme, disponibili în București"
+      "description": "Intervenții rapide pentru dureri dentare și traumatisme, disponibili în Alba Iulia"
     },
     "implants": {
       "title": "Implantologie",
@@ -38,7 +38,7 @@
   },
   "why_choose": {
     "title": "De Ce Să Ne Alegi",
-    "subtitle": "Clinica Ta de Încredere din București",
+    "subtitle": "Clinica Ta de Încredere din Alba Iulia",
     "description": "Suntem mândri să oferim servicii stomatologice de înaltă calitate comunității noastre. Echipa noastră de medici specializați se angajează să îți oferă cea mai bună îngrijire dentară.",
     "years": "Ani de Excelență în Stomatologie",
     "reasons": [
@@ -52,7 +52,7 @@
   },
   "testimonials": {
     "title": "Ce Spun Pacienții Noștri",
-    "subtitle": "Peste 3000 de pacienți mulțumiți în București și Ilfov"
+    "subtitle": "Peste 3000 de pacienți mulțumiți în Alba Iulia și Ilfov"
   },
   "cta": {
     "badge": "Programări Deschise",
