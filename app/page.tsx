@@ -14,32 +14,32 @@ const ContactPage = dynamic(() => import('../components/pages/ContactPage'))
 const ScrollingNavbar = dynamic(() => import('../components/components/ScrollingNavbar'))
 const Footer = dynamic(() => import('../components/components/Footer'))
 
-// ZirconiuDental business information
-export const demoBusinessInfo = {
-  name: "ZirconiuDental",
-  tagline: "Pasiune, Eficienta, Inovatie in Medicina Dentara moderna",
-  phone: "0752 438 156",
-  email: "zirconiudental@gmail.com",
-  address: "Vasile Goldis nr.22A",
-  city: "Alba Iulia",
-  state: "România",
-  zipCode: "510016",
-  description: "Clinică stomatologică modernă cu tehnologie laser de ultimă generație și servicii complete pentru adulți și copii",
-  yearsInBusiness: 8,
-  hours: {
-    "Luni-Vineri": "9:00 - 19:00",
-    "Sâmbătă": "9:00 - 15:00",
-    "Duminică": "Închis",
-    "Urgențe": "Program Special"
-  },
-  socialMedia: {
-    facebook: "https://www.facebook.com/EstheticAndLaserCenter/",
-    facebookKids: "https://www.facebook.com/LaserDentalKids/?locale=ro_RO",
-    instagram: "https://www.instagram.com/zirconiudental/",
-    website: "zirconiudental.ro"
-  }
-}
 export default function ZirconiuDentalTemplate() {
+  // ZirconiuDental business information
+  const demoBusinessInfo = {
+    name: "ZirconiuDental",
+    tagline: "Pasiune, Eficienta, Inovatie in Medicina Dentara moderna",
+    phone: "0752 438 156",
+    email: "zirconiudental@gmail.com",
+    address: "Vasile Goldis nr.22A",
+    city: "Alba Iulia",
+    state: "România",
+    zipCode: "510016",
+    description: "Clinică stomatologică modernă cu tehnologie laser de ultimă generație și servicii complete pentru adulți și copii",
+    yearsInBusiness: 8,
+    hours: {
+      "Luni-Vineri": "9:00 - 19:00",
+      "Sâmbătă": "9:00 - 15:00",
+      "Duminică": "Închis",
+      "Urgențe": "Program Special"
+    },
+    socialMedia: {
+      facebook: "https://www.facebook.com/EstheticAndLaserCenter/",
+      facebookKids: "https://www.facebook.com/LaserDentalKids/?locale=ro_RO",
+      instagram: "https://www.instagram.com/zirconiudental/",
+      website: "zirconiudental.ro"
+    }
+  }
   const [currentPage, setCurrentPage] = useState('home')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const bgColor = useColorModeValue('gray.50', 'gray.900')

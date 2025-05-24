@@ -453,7 +453,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 } as any}
                 >
                   <VStack
                     bg={cardBg}
@@ -677,7 +677,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 } as any}
                   _hover={{ 
                     shadow: '2xl',
                     transform: 'translateY(-4px)',
@@ -685,7 +685,6 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                   }}
                   position="relative"
                   overflow="hidden"
-                  transition="all 0.3s"
                 >
                   {/* Top gradient accent */}
                   <Box
