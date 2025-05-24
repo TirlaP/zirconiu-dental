@@ -8,20 +8,23 @@ interface NavigationProps {
   currentPage: string
   onNavigate: (page: string) => void
   businessInfo: any
+  isScrolled?: boolean
 }
 
-export default function Navigation({ currentPage, onNavigate, businessInfo }: NavigationProps) {
-  const [isScrolled, setIsScrolled] = useState(false)
+export default function Navigation({ currentPage, onNavigate, businessInfo, isScrolled: isScrolledProp }: NavigationProps) {
+  const [localIsScrolled, setLocalIsScrolled] = useState(false)
   
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50)
+      setLocalIsScrolled(scrollTop > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+  
+  const isScrolled = isScrolledProp !== undefined ? isScrolledProp : localIsScrolled
 
   const pages = ['home', 'services', 'about', 'projects', 'contact']
   const pageLabels: { [key: string]: string } = {

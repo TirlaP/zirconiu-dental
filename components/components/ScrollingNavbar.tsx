@@ -56,6 +56,7 @@ export default function ScrollingNavbar({ currentPage, onNavigate, businessInfo,
             currentPage={currentPage} 
             onNavigate={onNavigate}
             businessInfo={businessInfo}
+            isScrolled={isScrolled}
           />
           {children}
         </HStack>
