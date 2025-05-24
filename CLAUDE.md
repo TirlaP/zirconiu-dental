@@ -1,7 +1,68 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # ZirconiuDental Website Adaptation
 
 ## Project Overview
 Adapting the existing dental template for **ZirconiuDental**, a dental clinic in Alba Iulia, Romania, with both general dentistry and pediatric services.
+
+## Technical Stack & Commands
+
+### Development Commands
+```bash
+# Install dependencies
+npm install
+
+# Run development server (http://localhost:3000)
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+
+# Run linting (note: ESLint may have parent directory config issues)
+npm run lint
+
+# Type checking
+npm run typecheck  # if available
+
+# Clean install (if dependency issues)
+rm -rf node_modules package-lock.json && npm install
+```
+
+### Technology Stack
+- **Next.js 15.2.4** - React framework with App Router
+- **TypeScript 5.7.3** - Type safety
+- **Chakra UI 2.10.7** - Component library
+- **Framer Motion 11.18.2** - Animations
+- **i18next/react-i18next** - Internationalization
+- **Lucide React** - Icon library
+
+### Project Structure
+```
+/
+├── app/                 # Next.js App Router
+│   ├── page.tsx        # Main entry with navigation logic
+│   ├── layout.tsx      # Root layout with metadata
+│   ├── providers.tsx   # Chakra UI theme provider
+│   └── globals.css     # Global styles
+├── components/
+│   ├── components/     # Reusable components
+│   │   ├── Footer.tsx
+│   │   ├── Navigation.tsx
+│   │   └── ScrollingNavbar.tsx
+│   └── pages/          # Page components
+│       ├── HomePage.tsx
+│       ├── ServicesPage.tsx
+│       ├── AboutPage.tsx
+│       ├── ProjectsPage.tsx
+│       └── ContactPage.tsx
+└── public/
+    ├── locales/ro/     # Romanian translations
+    └── logo.jpg        # ZirconiuDental logo
 
 ## Business Information
 
@@ -43,23 +104,43 @@ Adapting the existing dental template for **ZirconiuDental**, a dental clinic in
 5. **General Dentistry** - Comprehensive dental care
 6. **Emergency Services** - Urgent dental care
 
-## Technical Structure
+## Architecture Patterns
 
-### Current Template Structure
-- **Next.js 15** with TypeScript
-- **Chakra UI** for components
-- **Framer Motion** for animations
-- **Internationalization** support (next-i18next)
-- **Single Page Application** with dynamic navigation
+### Navigation System
+- **Client-side routing** via state management in `app/page.tsx`
+- **Dynamic imports** for code splitting with `next/dynamic`
+- **Scrolling navbar** with transparency effect on homepage
+- **Mobile drawer** navigation for responsive design
+- **Scroll state** passed between ScrollingNavbar and Navigation components
+- **Responsive breakpoints**: 
+  - Mobile menu: `md` (768px)
+  - Button stacking: `md` (768px)
+  - Grid layouts: `md` for 2 columns, `lg` for 4 columns
 
-### Key Files to Modify
-1. **app/page.tsx** - Update business info and navigation
-2. **components/pages/HomePage.tsx** - Customize hero, services, testimonials
-3. **components/pages/ServicesPage.tsx** - Add ZirconiuDental specific services
-4. **components/pages/AboutPage.tsx** - Add Dr. Paul Achim and team info
-5. **components/pages/ContactPage.tsx** - Update contact details and location
-6. **components/components/Navigation.tsx** - Update branding
-7. **public/logo.jpg** - Replace with ZirconiuDental logo
+### State Management
+- React useState for page navigation
+- Chakra UI's useDisclosure for drawer state
+- Window scroll event listeners for navbar effects
+- Scroll state coordination between parent and child components
+
+### Theme Configuration
+- Chakra UI extended theme in `app/providers.tsx`
+- Brand colors defined (blue scale #029FFF primary)
+- Custom fonts: Inter for headings and body
+- Color mode values extracted at component level to avoid hooks issues
+
+### SEO Implementation
+- **Metadata** configured in `app/layout.tsx`
+- **Schema.org** structured data for DentalClinic
+- **Open Graph** and Twitter Card support
+- **Sitemap.xml** and robots.txt in public folder
+
+### Component Architecture
+- **BusinessInfo prop** passed to all page components
+- **onNavigate callback** for internal routing
+- **Responsive design** with Chakra UI breakpoints
+- **Dynamic loading** for performance optimization
+- **Framer Motion** integration via MotionBox/MotionVStack wrappers
 
 ## Customizations Required
 
@@ -113,24 +194,100 @@ Adapting the existing dental template for **ZirconiuDental**, a dental clinic in
 - Mixed experiences with certain procedures
 - Need to emphasize professional approach to patient care
 
-## Implementation Plan
+## Implementation Checklist
 
-1. **Phase 1**: Update business information and basic content
-2. **Phase 2**: Customize services and about sections
-3. **Phase 3**: Create realistic testimonials and case studies
-4. **Phase 4**: Optimize for Romanian SEO and local search
-5. **Phase 5**: Add social media integration and contact forms
+### Phase 1: Core Updates ✓
+- [x] Business information in `app/page.tsx` (already updated)
+- [ ] Update metadata in `app/layout.tsx` for Alba Iulia
+- [ ] Update schema.org structured data
+- [ ] Configure proper social media links
 
-## Logo Integration
-- ZirconiuDental logo is available in the public folder
-- Modern, professional design fits the template aesthetic
-- Will replace existing placeholder logo
+### Phase 2: Content Localization
+- [ ] Update all page content to Romanian
+- [ ] Implement proper Romanian translations in `/public/locales/ro/`
+- [ ] Add Dr. Paul Achim profile in AboutPage
+- [ ] Create ZirconiuDental-specific service descriptions
 
-## Target Audience
-- Local residents of Alba Iulia and surrounding areas
-- Parents seeking pediatric dental care
-- Adults looking for modern, painless dental treatments
-- Patients with dental anxiety (highlighting sedation services)
-- Emergency dental care seekers
+### Phase 3: Visual & UX Updates
+- [ ] Logo already in place at `/public/logo.jpg`
+- [ ] Update theme colors if needed (current blue works well)
+- [ ] Add actual clinic photos when available
+- [ ] Optimize mobile experience for local users
 
-This adaptation will transform the generic dental template into a localized, authentic representation of ZirconiuDental's unique services and approach to modern dentistry in Alba Iulia, Romania.
+### Phase 4: SEO & Performance
+- [ ] Update sitemap.xml with Alba Iulia location
+- [ ] Configure local SEO for "stomatolog alba iulia"
+- [ ] Add Google My Business integration
+- [ ] Implement proper meta descriptions
+
+### Phase 5: Advanced Features
+- [ ] Online appointment booking system
+- [ ] WhatsApp integration (0752 438 156)
+- [ ] Google Reviews integration
+- [ ] Emergency contact prominently displayed
+
+## Development Best Practices
+
+### Code Style
+- Use TypeScript strict mode (already enabled)
+- Follow React best practices with hooks
+- Maintain component modularity
+- Use Chakra UI components consistently
+
+### Performance Optimization
+- Dynamic imports for code splitting
+- Image optimization with Next.js Image
+- Minimize bundle size
+- Enable ISR for static pages
+
+### Testing Considerations
+- Test on mobile devices (primary user base)
+- Verify Romanian text rendering
+- Check form validations
+- Test emergency contact visibility
+
+## Known Issues & Solutions
+
+### Current Limitations
+1. **i18next not fully configured** - translations exist but not implemented
+2. **Single page navigation** - consider adding URL routing
+3. **No analytics** - add Google Analytics/Tag Manager
+4. **No appointment system** - integrate booking solution
+5. **ESLint parent directory issue** - May show error about `.eslintrc.js` in parent directory
+
+### Common Development Issues
+1. **React Hooks errors**: Always call hooks at top level, not inside conditions or loops
+   - Extract `useColorModeValue` calls to component level
+   - Avoid hooks inside map functions
+2. **TypeScript errors with Framer Motion**: Use `as any` for complex transition props
+3. **Mobile menu visibility**: Ensure scroll state is properly passed to child components
+4. **Responsive breakpoints**: Use `md` (768px) instead of `sm` (480px) for better mobile UX
+
+### Quick Fixes Needed
+- Update all instances of "DentistExpert" to "ZirconiuDental"
+- Change București references to Alba Iulia
+- Update coordinates for Google Maps integration
+- Add emergency hours to business info
+
+## Deployment Notes
+
+### Environment Variables Needed
+```env
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=
+NEXT_PUBLIC_GA_MEASUREMENT_ID=
+NEXT_PUBLIC_FACEBOOK_PIXEL_ID=
+```
+
+### Build Optimization
+- Use `npm run build` for production
+- Enable Next.js compression
+- Configure proper caching headers
+- Use CDN for static assets
+
+### Hosting Recommendations
+- Vercel (optimal for Next.js)
+- Configure custom domain: zirconiudental.ro
+- Set up SSL certificate
+- Enable HTTP/2 for performance
+
+This comprehensive guide ensures consistent development and successful deployment of the ZirconiuDental website adaptation.
