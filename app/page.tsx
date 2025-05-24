@@ -3,7 +3,7 @@
 import { Box, Button, Container, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Hide, HStack, IconButton, useColorModeValue, useDisclosure, VStack } from '@chakra-ui/react'
 import { Menu } from 'lucide-react'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // Import the pages
 const HomePage = dynamic(() => import('../components/pages/HomePage'))
@@ -41,8 +41,17 @@ export default function ZirconiuDentalTemplate() {
     }
   }
   const [currentPage, setCurrentPage] = useState('home')
+  const [isScrolled, setIsScrolled] = useState(false)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const bgColor = useColorModeValue('gray.50', 'gray.900')
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   const handleNavigation = (page: string) => {
     setCurrentPage(page)
@@ -81,8 +90,8 @@ export default function ZirconiuDentalTemplate() {
             icon={<Menu />}
             onClick={onOpen}
             variant="ghost"
-            color={currentPage === 'home' ? 'white' : 'gray.600'}
-            _hover={{ bg: currentPage === 'home' ? 'whiteAlpha.200' : 'gray.100' }}
+            color={currentPage === 'home' && !isScrolled ? 'white' : 'gray.600'}
+            _hover={{ bg: currentPage === 'home' && !isScrolled ? 'whiteAlpha.200' : 'gray.100' }}
           />
         </Hide>
       </ScrollingNavbar>

@@ -141,7 +141,7 @@ export default function ProjectsPage({ businessInfo }: ProjectsPageProps) {
                   h="full"
                 >
                   {/* Case Header */}
-                  <Box w="full" p={6} bg={useColorModeValue(`${case_item.color.split('.')[0]}.50`, `${case_item.color.split('.')[0]}.900`)}>
+                  <Box w="full" p={6} bg={`${case_item.color.split('.')[0]}.50`}>
                     <HStack justify="space-between" align="start">
                       <VStack align="start" spacing={3}>
                         <HStack spacing={3}>

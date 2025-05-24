@@ -114,7 +114,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
           animation={`${float} 6s ease-in-out infinite reverse`}
         />
         
-        <Container maxW="container.xl" py={{ base: 16, md: 20 }} position="relative" display="flex" alignItems="center" minH="100vh">
+        <Container maxW="container.xl" py={{ base: 8, sm: 12, md: 16, lg: 20 }} position="relative" display="flex" alignItems="center" minH="100vh">
           <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={12} alignItems="center" w="full">
             {/* Left Content */}
             <MotionVStack 
@@ -149,7 +149,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
               <VStack spacing={4} align={{ base: 'center', lg: 'start' }}>
                 <Heading
                   as="h1"
-                  fontSize={{ base: '3xl', md: '4xl', lg: '5xl', xl: '6xl' }}
+                  fontSize={{ base: '2xl', sm: '3xl', md: '4xl', lg: '5xl', xl: '6xl' }}
                   fontWeight="black"
                   lineHeight="shorter"
                   letterSpacing="-0.02em"
@@ -164,7 +164,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                   </Text>
                 </Heading>
                 <Text 
-                  fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }} 
+                  fontSize={{ base: 'md', sm: 'lg', md: 'xl', lg: '2xl' }} 
                   fontWeight="medium"
                   opacity={0.95}
                   maxW="600px"
@@ -178,8 +178,8 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
               {/* CTA Buttons */}
               <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} pt={2} w={{ base: 'full', sm: 'auto' }}>
                 <Button
-                  size="xl"
-                  h="60px"
+                  size={{ base: "lg", md: "xl" }}
+                  h={{ base: "50px", md: "60px" }}
                   px={8}
                   bg="white"
                   color="purple.700"
@@ -199,8 +199,8 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                   Programează Consultația
                 </Button>
                 <Button
-                  size="xl"
-                  h="60px"
+                  size={{ base: "lg", md: "xl" }}
+                  h={{ base: "50px", md: "60px" }}
                   px={8}
                   variant="outline"
                   borderColor="white"
@@ -447,7 +447,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
               </Text>
             </MotionVStack>
             
-            <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing={6} w="full">
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={6} w="full">
               {services.map((service, idx) => (
                 <MotionBox
                   key={idx}
@@ -596,7 +596,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                 </Text>
               </Box>
               
-              <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={3} w="full">
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3} w="full">
                 {whyChooseUs.map((item, idx) => (
                   <HStack key={idx} spacing={3} align="start">
                     <Icon as={CheckCircle} boxSize={5} color="green.500" mt={0.5} />
@@ -740,7 +740,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
                     </Text>
                     
                     {/* Patient info */}
-                    <Box pt={2} borderTop="1px solid" borderColor={useColorModeValue('gray.200', 'gray.600')} w="full">
+                    <Box pt={2} borderTop="1px solid" borderColor={borderColor} w="full">
                       <Text fontWeight="bold" color={headingColor} fontSize="md">
                         {testimonial.name}
                       </Text>
@@ -853,8 +853,8 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
             
             <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} justify="center">
               <Button
-                size="xl"
-                h="60px"
+                size={{ base: "lg", md: "xl" }}
+                h={{ base: "50px", md: "60px" }}
                 px={10}
                 bg="white"
                 color="purple.700"

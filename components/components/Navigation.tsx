@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Button, Flex, HStack, Show, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Show, Text, useColorModeValue, IconButton, Hide } from '@chakra-ui/react'
 import { Activity, Phone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -121,24 +121,44 @@ export default function Navigation({ currentPage, onNavigate, businessInfo }: Na
           ))}
         </HStack>
         
-        {/* CTA Button */}
-        <Button
-          colorScheme={shouldUseLightColors ? 'whiteAlpha' : 'blue'}
-          variant={shouldUseLightColors ? 'outline' : 'solid'}
-          size="sm"
-          leftIcon={<Phone size={16} />}
-          as="a"
-          href={`tel:${businessInfo.phone}`}
-          borderColor={shouldUseLightColors ? "whiteAlpha.400" : "transparent"}
-          backdropFilter={shouldUseLightColors ? "blur(10px)" : "none"}
-          _hover={{
-            transform: 'translateY(-1px)',
-            boxShadow: shouldUseLightColors ? '0 4px 20px rgba(255,255,255,0.2)' : 'md'
-          }}
-          transition="all 0.3s"
-        >
-          Programare: {businessInfo.phone}
-        </Button>
+        {/* CTA Button - Responsive */}
+        <Hide below="lg">
+          <Button
+            colorScheme={shouldUseLightColors ? 'whiteAlpha' : 'blue'}
+            variant={shouldUseLightColors ? 'outline' : 'solid'}
+            size="sm"
+            leftIcon={<Phone size={16} />}
+            as="a"
+            href={`tel:${businessInfo.phone}`}
+            borderColor={shouldUseLightColors ? "whiteAlpha.400" : "transparent"}
+            backdropFilter={shouldUseLightColors ? "blur(10px)" : "none"}
+            _hover={{
+              transform: 'translateY(-1px)',
+              boxShadow: shouldUseLightColors ? '0 4px 20px rgba(255,255,255,0.2)' : 'md'
+            }}
+            transition="all 0.3s"
+          >
+            Programare: {businessInfo.phone}
+          </Button>
+        </Hide>
+        <Show below="lg">
+          <IconButton
+            aria-label="Call"
+            icon={<Phone size={20} />}
+            colorScheme={shouldUseLightColors ? 'whiteAlpha' : 'blue'}
+            variant={shouldUseLightColors ? 'outline' : 'solid'}
+            size="sm"
+            as="a"
+            href={`tel:${businessInfo.phone}`}
+            borderColor={shouldUseLightColors ? "whiteAlpha.400" : "transparent"}
+            backdropFilter={shouldUseLightColors ? "blur(10px)" : "none"}
+            _hover={{
+              transform: 'translateY(-1px)',
+              boxShadow: shouldUseLightColors ? '0 4px 20px rgba(255,255,255,0.2)' : 'md'
+            }}
+            transition="all 0.3s"
+          />
+        </Show>
       </Show>
     </Flex>
   )

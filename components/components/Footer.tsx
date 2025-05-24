@@ -1,6 +1,6 @@
 'use client'
 
-import { Badge, Box, Button, Container, Divider, Flex, HStack, Icon, IconButton, Input, Link, SimpleGrid, Text, useColorModeValue, VStack } from '@chakra-ui/react'
+import { Badge, Box, Button, Container, Divider, Flex, HStack, Icon, IconButton, Input, Link, SimpleGrid, Stack, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 import { Activity, Award, CheckCircle, Clock, Facebook, Heart, Instagram, Mail, MapPin, Phone, Send, Shield } from 'lucide-react'
 
 interface FooterProps {
@@ -46,13 +46,13 @@ export default function Footer({ businessInfo, onNavigate }: FooterProps) {
       <Box bg="blue.600" py={8}>
         <Container maxW="container.xl">
           <VStack spacing={4}>
-            <Text fontSize="2xl" fontWeight="bold" color="white" textAlign="center">
+            <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" color="white" textAlign="center">
               Abonează-te la Newsletter
             </Text>
             <Text color="blue.100" textAlign="center">
               Primește sfaturi de îngrijire dentară și oferte exclusive
             </Text>
-            <HStack maxW="md" w="full">
+            <Stack direction={{ base: "column", sm: "row" }} maxW="md" w="full" spacing={3}>
               <Input
                 placeholder="Adresa ta de email"
                 bg="white"
@@ -67,7 +67,7 @@ export default function Footer({ businessInfo, onNavigate }: FooterProps) {
               >
                 Abonează-te
               </Button>
-            </HStack>
+            </Stack>
             <Text fontSize="xs" color="blue.100">
               Prin abonare, ești de acord cu Politica de Confidențialitate și procesarea datelor conform GDPR
             </Text>

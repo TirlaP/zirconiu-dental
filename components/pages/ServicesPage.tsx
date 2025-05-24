@@ -135,7 +135,7 @@ export default function ServicesPage({ businessInfo, onNavigate }: ServicesPageP
                   <VStack spacing={4}>
                     <Box
                       p={4}
-                      bg={useColorModeValue(`${service.color.split('.')[0]}.50`, `${service.color.split('.')[0]}.900`)}
+                      bg={`${service.color.split('.')[0]}.50`}
                       borderRadius="2xl"
                       color={service.color}
                     >
