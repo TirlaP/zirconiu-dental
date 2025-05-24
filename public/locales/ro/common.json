@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "about": "Despre Noi",
+    "cases": "Cazuri",
+    "contact": "Contact",
+    "appointment": "Programare"
+  },
+  "hero": {
+    "badge": "Cabinet Stomatologic Modern",
+    "title": "Cabinet Stomatologic București - Sănătate Dentară Completă",
+    "subtitle": "Servicii complete de stomatologie în București și împrejurimi. Programare rapidă în 24 ore, echipamente moderne și garanție pe viață.",
+    "cta_call": "Sună Acum",
+    "cta_appointment": "Programare Online",
+    "rating": "Rating Google",
+    "patients": "Pacienți Mulțumiți"
+  },
+  "services": {
+    "title": "Serviciile Noastre Stomatologice",
+    "subtitle": "De la urgențe stomatologice la tratamente estetice complexe, oferim soluții moderne pentru toate nevoile tale de sănătate dentară.",
+    "emergency": {
+      "title": "Urgențe Stomatologice",
+      "description": "Intervenții rapide pentru dureri dentare și traumatisme, disponibili în București"
+    },
+    "implants": {
+      "title": "Implantologie",
+      "description": "Implanturi dentare de ultimă generație cu garanție pe viață"
+    },
+    "aesthetics": {
+      "title": "Estetica Dentară",
+      "description": "Albire profesională, fațete ceramice și refaceri estetice"
+    },
+    "orthodontics": {
+      "title": "Ortodonție",
+      "description": "Aparate dentare moderne, inclusiv sistemul Invisalign"
+    }
+  },
+  "why_choose": {
+    "title": "De Ce Să Ne Alegi",
+    "subtitle": "Clinica Ta de Încredere din București",
+    "description": "Suntem mândri să oferim servicii stomatologice de înaltă calitate comunității noastre. Echipa noastră de medici specializați se angajează să îți oferă cea mai bună îngrijire dentară.",
+    "years": "Ani de Excelență în Stomatologie",
+    "reasons": [
+      "Medici Stomatologi cu Experiență",
+      "Programări Flexibile și Urgențe",
+      "Garanție pentru Toate Lucrările",
+      "Prețuri Corecte, Fără Surprize",
+      "Peste 3000 de Pacienți Mulțumiți",
+      "12+ Ani de Experiență în Stomatologie"
+    ]
+  },
+  "testimonials": {
+    "title": "Ce Spun Pacienții Noștri",
+    "subtitle": "Peste 3000 de pacienți mulțumiți în București și Ilfov"
+  },
+  "cta": {
+    "badge": "Programări Deschise",
+    "title": "Ai Nevoie de un Dentist? Suntem Aici!",
+    "subtitle": "Cabinet modern cu echipamente de ultimă generație. Sună acum pentru programare sau consultații de urgență.",
+    "call": "Sună",
+    "appointment": "Programează Online"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Abonează-te la Newsletter",
+      "subtitle": "Primește sfaturi de îngrijire dentară și oferte exclusive",
+      "placeholder": "Adresa ta de email",
+      "subscribe": "Abonează-te",
+      "gdpr": "Prin abonare, ești de acord cu Politica de Confidențialitate și procesarea datelor conform GDPR"
+    },
+    "company": "Cabinet stomatologic din 2013",
+    "description": "Cabinet stomatologic modern cu echipamente de ultimă generație. Oferim servicii complete de îngrijire dentară.",
+    "certifications": [
+      "Autorizat Ministerul Sănătății",
+      "Membru CMR",
+      "Asigurare Malpractice"
+    ],
+    "services_list": [
+      "Urgențe Stomatologice",
+      "Implantologie Dentară",
+      "Ortodonție",
+      "Estetica Dentară",
+      "Paradontologie",
+      "Endodonție"
+    ],
+    "popular_services": [
+      "Albire Dentară",
+      "Plombe Estetice",
+      "Proteze Mobile",
+      "Igienizare Profesională"
+    ],
+    "payment_methods": "Metode de Plată",
+    "contact_info": "Informații Contact",
+    "follow_us": "Urmărește-ne",
+    "schedule": {
+      "weekdays": "Luni-Vineri: 09:00-19:00",
+      "saturday": "Sâmbătă: 10:00-15:00",
+      "sunday": "Duminică: Închis"
+    },
+    "copyright": "Toate drepturile rezervate.",
+    "legal": [
+      "Politica de Confidențialitate",
+      "Termeni și Condiții",
+      "Politica Cookie",
+      "ANPC",
+      "Hartă Site"
+    ],
+    "made_with_love": "Dezvoltat cu ❤️ în România"
+  }
+}

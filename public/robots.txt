@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dentistepar.ro/sitemap.xml
+
+# SEO optimizations
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow search engines to crawl all public pages
+Allow: /servicii
+Allow: /despre-noi
+Allow: /cazuri
+Allow: /contact
+Allow: /programare

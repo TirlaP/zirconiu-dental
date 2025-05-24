@@ -1,0 +1,32 @@
+{
+  "name": "dental-template-01",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.10.7",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "framer-motion": "^11.18.2",
+    "i18next": "^25.2.0",
+    "lucide-react": "^0.469.0",
+    "next": "^15.2.4",
+    "next-i18next": "^15.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.3",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^15.2.4",
+    "typescript": "^5.7.3"
+  }
+}
