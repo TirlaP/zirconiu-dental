@@ -16,6 +16,7 @@ export default function ContactPage({ businessInfo }: ContactPageProps) {
   const textColor = useColorModeValue('gray.700', 'gray.300')
   const headingColor = useColorModeValue('gray.800', 'white')
   const cardBg = useColorModeValue('gray.50', 'gray.700')
+  const borderColor = useColorModeValue('gray.200', 'gray.600')
   
   const contactInfo = [
     {
@@ -108,7 +109,7 @@ export default function ContactPage({ businessInfo }: ContactPageProps) {
                   spacing={4}
                   textAlign="center"
                   borderWidth={1}
-                  borderColor={useColorModeValue('gray.200', 'gray.600')}
+                  borderColor={borderColor}
                   _hover={{ shadow: 'lg', transform: 'translateY(-4px)' }}
                   transition="all 0.3s"
                 >                  <Box

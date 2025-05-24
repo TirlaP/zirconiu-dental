@@ -16,6 +16,7 @@ export default function AboutPage({ businessInfo }: AboutPageProps) {
   const textColor = useColorModeValue('gray.700', 'gray.300')
   const headingColor = useColorModeValue('gray.800', 'white')
   const cardBg = useColorModeValue('gray.50', 'gray.700')
+  const borderColor = useColorModeValue('gray.200', 'gray.600')
   
   const stats = [
     { number: '94%', label: 'Pacienți ne Recomandă', icon: Users },
@@ -178,7 +179,7 @@ export default function AboutPage({ businessInfo }: AboutPageProps) {
                     borderRadius="2xl"
                     spacing={6}
                     borderWidth={1}
-                    borderColor={useColorModeValue('gray.200', 'gray.600')}
+                    borderColor={borderColor}
                     _hover={{ shadow: 'xl', transform: 'translateY(-4px)' }}
                     transition="all 0.3s"
                   >
@@ -273,7 +274,7 @@ export default function AboutPage({ businessInfo }: AboutPageProps) {
                     p={8}
                     borderRadius="2xl"
                     borderWidth={1}
-                    borderColor={useColorModeValue('gray.200', 'gray.600')}
+                    borderColor={borderColor}
                     _hover={{ shadow: 'lg' }}
                     transition="all 0.3s"
                   >

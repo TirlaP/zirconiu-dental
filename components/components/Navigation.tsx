@@ -36,10 +36,15 @@ export default function Navigation({ currentPage, onNavigate, businessInfo }: Na
   // On other pages: always dark
   const shouldUseLightColors = currentPage === 'home' && !isScrolled
   
-  const logoTextColor = shouldUseLightColors ? 'white' : useColorModeValue('gray.800', 'white')
-  const navTextColor = shouldUseLightColors ? 'whiteAlpha.900' : useColorModeValue('gray.700', 'gray.300')
-  const navTextHoverColor = shouldUseLightColors ? 'white' : useColorModeValue('blue.600', 'blue.400')
-  const activeNavColor = shouldUseLightColors ? 'white' : useColorModeValue('blue.600', 'blue.400')
+  const darkLogoTextColor = useColorModeValue('gray.800', 'white')
+  const darkNavTextColor = useColorModeValue('gray.700', 'gray.300')
+  const darkNavTextHoverColor = useColorModeValue('blue.600', 'blue.400')
+  const darkActiveNavColor = useColorModeValue('blue.600', 'blue.400')
+  
+  const logoTextColor = shouldUseLightColors ? 'white' : darkLogoTextColor
+  const navTextColor = shouldUseLightColors ? 'whiteAlpha.900' : darkNavTextColor
+  const navTextHoverColor = shouldUseLightColors ? 'white' : darkNavTextHoverColor
+  const activeNavColor = shouldUseLightColors ? 'white' : darkActiveNavColor
 
   return (
     <Flex w="full" justify="space-between" align="center">
