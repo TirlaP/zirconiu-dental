@@ -176,7 +176,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
               </VStack>
               
               {/* CTA Buttons */}
-              <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} pt={2} w={{ base: 'full', sm: 'auto' }}>
+              <Stack direction={{ base: 'column', md: 'row' }} spacing={4} pt={2} w={{ base: 'full', md: 'auto' }}>
                 <Button
                   size={{ base: "lg", md: "xl" }}
                   h={{ base: "50px", md: "60px" }}
@@ -851,7 +851,7 @@ export default function HomePage({ businessInfo, onNavigate }: HomePageProps) {
               </HStack>
             </VStack>
             
-            <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} justify="center">
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justify="center">
               <Button
                 size={{ base: "lg", md: "xl" }}
                 h={{ base: "50px", md: "60px" }}
